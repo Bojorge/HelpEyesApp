@@ -11,4 +11,11 @@
         android:text="Acelerometro" />
 
 
+    <Button
+        android:id="@+id/btnSensorLuz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sensor de Luz" />
+
+
 </LinearLayout>

@@ -14,6 +14,7 @@ public class MainActivity extends Activity {
     /** Called when the activity is first created. */
 
     Button acelerometro;
+    Button sensorLuz;
 
 
     @Override
@@ -23,12 +24,21 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         acelerometro=(Button)findViewById(R.id.btnAcelerometro);
+        sensorLuz=(Button)findViewById(R.id.btnSensorLuz);
 
         acelerometro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent acelerometro=new Intent(MainActivity.this,Acelerometro.class);
                 startActivity(acelerometro);
+            }
+        });
+
+        sensorLuz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent sensorLuz=new Intent(MainActivity.this,SensorLuz.class);
+                startActivity(sensorLuz);
             }
         });
     }
