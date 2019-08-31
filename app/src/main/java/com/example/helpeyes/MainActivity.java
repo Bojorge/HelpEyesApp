@@ -15,6 +15,7 @@ public class MainActivity extends Activity {
 
     Button acelerometro;
     Button sensorLuz;
+    Button proximidad;
 
 
     @Override
@@ -25,6 +26,7 @@ public class MainActivity extends Activity {
 
         acelerometro=(Button)findViewById(R.id.btnAcelerometro);
         sensorLuz=(Button)findViewById(R.id.btnSensorLuz);
+        proximidad=(Button)findViewById(R.id.btnProximidad);
 
         acelerometro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +41,14 @@ public class MainActivity extends Activity {
             public void onClick(View view) {
                 Intent sensorLuz=new Intent(MainActivity.this,SensorLuz.class);
                 startActivity(sensorLuz);
+            }
+        });
+
+        proximidad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent proximidad=new Intent(MainActivity.this,SensorProximidad.class);
+                startActivity(proximidad);
             }
         });
     }

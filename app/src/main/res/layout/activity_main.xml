@@ -15,7 +15,24 @@
         android:id="@+id/btnSensorLuz"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sensor de Luz" />
+        android:text="Sensor de luz" />
 
+    <Button
+        android:id="@+id/btnProximidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sensor de proximidad" />
+
+    <Button
+        android:id="@+id/btnTemperatura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sensor de temperatura" />
+
+    <Button
+        android:id="@+id/btnGiroscopio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Giroscopio" />
 
 </LinearLayout>
