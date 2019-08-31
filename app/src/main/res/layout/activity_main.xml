@@ -35,4 +35,18 @@
         android:layout_height="wrap_content"
         android:text="Giroscopio" />
 
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="enviar"
+        android:text="Enviar"/>
+
+
+    <EditText
+        android:id="@+id/btnEditar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mensaje"/>
+
 </LinearLayout>
