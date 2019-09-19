@@ -122,21 +122,20 @@ public class Acelerometro extends Activity implements SensorEventListener {
         this.z.setText("Z = "+event.values[SensorManager.DATA_Z]);
         setZtxt(Float.toString(event.values[SensorManager.DATA_Z]));
 
-        sleep(5);
 
         if(event.values[SensorManager.DATA_X]<-4){
-            c.execute("inclinacion lateral hacia la izquierda");
+            c.execute("incL");
         }
         if(event.values[SensorManager.DATA_X]>4){
-            c.execute("inclinacion lateral hacia la derecha");
+            c.execute("incR");
 
         }
         if(event.values[SensorManager.DATA_Y]<7 && event.values[SensorManager.DATA_Z]>7){
-            c.execute("cuidado cae de espalda");
+            c.execute("esp");
 
         }
         if(event.values[SensorManager.DATA_Y]<7 && event.values[SensorManager.DATA_Z]<-6){
-            c.execute("cuidado cae de frente");
+            c.execute("frte");
 
         }
 
