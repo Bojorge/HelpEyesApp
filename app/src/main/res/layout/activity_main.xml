@@ -44,9 +44,17 @@
 
 
     <EditText
-        android:id="@+id/btnEditar"
+        android:id="@+id/txtEscribir"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mensaje"/>
+        android:text="Mensaje que envia el cliente"/>
+
+    <TextView
+        android:id="@+id/txtLeer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mensaje que envia el servidor" />
+
+
 
 </LinearLayout>

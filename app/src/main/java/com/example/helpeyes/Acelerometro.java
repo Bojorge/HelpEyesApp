@@ -13,11 +13,38 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import static android.os.SystemClock.sleep;
+
 public class Acelerometro extends Activity implements SensorEventListener {
 
     TextView x,y,z;
+    String Xtxt, Ytxt, Ztxt;
 
     private Sensor mAccelerometer;
+
+    public String getXtxt() {
+        return Xtxt;
+    }
+
+    public void setXtxt(String xtxt) {
+        Xtxt = xtxt;
+    }
+
+    public String getYtxt() {
+        return Ytxt;
+    }
+
+    public void setYtxt(String ytxt) {
+        Ytxt = ytxt;
+    }
+
+    public String getZtxt() {
+        return Ztxt;
+    }
+
+    public void setZtxt(String ztxt) {
+        Ztxt = ztxt;
+    }
 
     @Override
 
@@ -84,12 +111,35 @@ public class Acelerometro extends Activity implements SensorEventListener {
     @Override
 
     public void onSensorChanged(SensorEvent event) {
+        Cliente c=new Cliente(this);
 
         this.x.setText("X = "+event.values[SensorManager.DATA_X]);
+        setXtxt(Float.toString(event.values[SensorManager.DATA_X]));
 
         this.y.setText("Y = "+event.values[SensorManager.DATA_Y]);
+        setYtxt(Float.toString(event.values[SensorManager.DATA_Y]));
 
         this.z.setText("Z = "+event.values[SensorManager.DATA_Z]);
+        setZtxt(Float.toString(event.values[SensorManager.DATA_Z]));
+
+        sleep(5);
+
+        if(event.values[SensorManager.DATA_X]<-4){
+            c.execute("inclinacion lateral hacia la izquierda");
+        }
+        if(event.values[SensorManager.DATA_X]>4){
+            c.execute("inclinacion lateral hacia la derecha");
+
+        }
+        if(event.values[SensorManager.DATA_Y]<7 && event.values[SensorManager.DATA_Z]>7){
+            c.execute("cuidado cae de espalda");
+
+        }
+        if(event.values[SensorManager.DATA_Y]<7 && event.values[SensorManager.DATA_Z]<-6){
+            c.execute("cuidado cae de frente");
+
+        }
+
 
     }
 
