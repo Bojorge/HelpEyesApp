@@ -24,36 +24,23 @@
         android:text="Sensor de proximidad" />
 
     <Button
-        android:id="@+id/btnTemperatura"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sensor de temperatura" />
-
-    <Button
-        android:id="@+id/btnGiroscopio"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Giroscopio" />
-
-    <Button
         android:id="@+id/btnEnviar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="enviar"
         android:text="Enviar"/>
 
-
     <EditText
         android:id="@+id/txtEscribir"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mensaje que envia el cliente"/>
+        android:text=""/>
 
     <TextView
         android:id="@+id/txtLeer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mensaje que envia el servidor" />
+        android:text="Mensaje para el server (se pueden hacer pruebas)" />
 
 
 

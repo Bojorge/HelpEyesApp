@@ -33,8 +33,6 @@ public class MainActivity extends AppCompatActivity {
         proximidad = (Button) findViewById(R.id.btnProximidad);
         mensaje = (EditText) findViewById(R.id.txtEscribir);
         enviar = (Button) findViewById(R.id.btnEnviar);
-
-
         textIn = (TextView)findViewById(R.id.txtLeer);
 
         acelerometro.setOnClickListener(new View.OnClickListener() {
@@ -79,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
     public void enviar(View vista){
         Cliente c=new Cliente(this);
         c.execute(mensaje.getText().toString());
-        textIn.setText(c.getTexto());
+
     }
 
 }

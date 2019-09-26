@@ -128,15 +128,12 @@ public class Acelerometro extends Activity implements SensorEventListener {
         }
         if(event.values[SensorManager.DATA_X]>4){
             c.execute("incR");
-
         }
         if(event.values[SensorManager.DATA_Y]<7 && event.values[SensorManager.DATA_Z]>7){
             c.execute("esp");
-
         }
         if(event.values[SensorManager.DATA_Y]<7 && event.values[SensorManager.DATA_Z]<-6){
             c.execute("frte");
-
         }
 
 

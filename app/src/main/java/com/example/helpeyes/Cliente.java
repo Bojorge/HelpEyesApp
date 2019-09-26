@@ -51,7 +51,7 @@ public class Cliente extends AsyncTask<String,Void,Void> {
         try {
 
             mensaje=strings[0];
-            String ip = "192.168.8.103";
+            String ip = "192.168.8.102";
             cliente = new Socket(ip, 1234);
             writer=new PrintWriter(cliente.getOutputStream());
             writer.write(mensaje);
