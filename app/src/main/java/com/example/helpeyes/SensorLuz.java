@@ -68,13 +68,13 @@ public class SensorLuz extends Activity implements SensorEventListener{
         intensidadLuz.setText("intensidad de luz:  "+intensidad);
 
         if(intensidad<20){
-            c.execute("dark");
+            c.execute("d");
         }
         else if(intensidad<100 && intensidad>20){
-            c.execute("black");
+            c.execute("b");
         }
         else if(intensidad>500){
-            c.execute("light");
+            c.execute("l");
         }
 
     }
