@@ -32,35 +32,6 @@ public class SensorLuz extends Activity implements SensorEventListener{
 
         intensidadLuz=(TextView)findViewById(R.id.txtLuz);
 
-        //sm = (SensorManager) getSystemService(SENSOR_SERVICE);
-        //sensorLuz =sm.getDefaultSensor(TYPE_LIGHT);
-
-        /*
-        if(sensorLuz==null){
-            Toast.makeText(this,"no hay sensor de luz",Toast.LENGTH_SHORT).show();
-            finish();
-        }
-        */
-        /*
-        lightEventListener=new SensorEventListener() {
-            @Override
-            public void onSensorChanged(SensorEvent sensorEvent) {
-
-
-                float intensi=sensorEvent.values[0];
-                intensidadLuz.setText("intensidad de luz:  "+intensi);
-
-
-            }
-
-
-            @Override
-            public void onAccuracyChanged(Sensor sensor, int i) {
-
-            }
-        };
-        */
-
 
     }
 
