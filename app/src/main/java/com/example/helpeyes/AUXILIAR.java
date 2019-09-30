@@ -181,7 +181,8 @@ public class AUXILIAR extends AppCompatActivity  implements SensorEventListener{
                 case Sensor.TYPE_STEP_COUNTER:
                     if(running){
                         tv_steps.setText(String.valueOf(evento.values[0]));
-                        c3.execute("r");
+                        String pasos=String.valueOf(evento.values[0]);
+                        c3.execute(pasos);
                     }
 
 
