@@ -18,10 +18,53 @@
         android:text="Sensor de luz" />
 
     <Button
-        android:id="@+id/btnProximidad"
+        android:id="@+id/btnPasos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sensor de proximidad" />
+        android:text="Contador de pasos" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="Datos del acelerómetro" />
+
+    <TextView
+        android:id="@+id/xID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="X" />
+
+    <TextView
+        android:id="@+id/yID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Y" />
+
+    <TextView
+        android:id="@+id/zID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Z" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="Datos del sensor de luz" />
+
+    <TextView
+        android:id="@+id/txtLuz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="intensidad de luz" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="Datos del contador de pasos" />
 
     <Button
         android:id="@+id/btnEnviar"

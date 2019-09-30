@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button acelerometro;
     Button sensorLuz;
-    Button proximidad;
+    Button pasos;
     EditText mensaje;
     Button enviar;
     TextView textIn;
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         acelerometro = (Button) findViewById(R.id.btnAcelerometro);
         sensorLuz = (Button) findViewById(R.id.btnSensorLuz);
-        proximidad = (Button) findViewById(R.id.btnProximidad);
+        pasos = (Button) findViewById(R.id.btnPasos);
         mensaje = (EditText) findViewById(R.id.txtEscribir);
         enviar = (Button) findViewById(R.id.btnEnviar);
         textIn = (TextView)findViewById(R.id.txtLeer);
@@ -51,11 +51,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        proximidad.setOnClickListener(new View.OnClickListener() {
+        pasos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent proximidad = new Intent(MainActivity.this, SensorProximidad.class);
-                startActivity(proximidad);
+                Intent Contadorpasos = new Intent(MainActivity.this, ContadorPasos.class);
+                startActivity(Contadorpasos);
             }
         });
 
