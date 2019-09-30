@@ -31,7 +31,7 @@ public class Cliente extends AsyncTask<String,Void,Void> {
 
     char[] cbuf = new char[512];
 
-//cd Escritorio/HelpEyes/HelpEyesServer
+//cd Escritorio/PROYECTO COMPILADORES/HelpEyesServer
 
     Cliente(Context c){
         this.c=c;
@@ -51,7 +51,7 @@ public class Cliente extends AsyncTask<String,Void,Void> {
         try {
 
             mensaje=strings[0];
-            String ip = "192.168.8.105";
+            String ip = "192.168.8.106";
             cliente = new Socket(ip, 1234);
             writer=new PrintWriter(cliente.getOutputStream());
             writer.write(mensaje);

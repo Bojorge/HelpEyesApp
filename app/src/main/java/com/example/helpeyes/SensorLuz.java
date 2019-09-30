@@ -40,9 +40,8 @@ public class SensorLuz extends Activity implements SensorEventListener{
     protected void onPause() {
         super.onPause();
 
-        sm = (SensorManager) getSystemService(SENSOR_SERVICE);
-
-        sm.unregisterListener(this, sensorLuz);
+        //sm = (SensorManager) getSystemService(SENSOR_SERVICE);
+        //sm.unregisterListener(this, sensorLuz);
     }
 
     @Override

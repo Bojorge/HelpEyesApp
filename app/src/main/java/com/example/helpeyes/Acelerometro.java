@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import static android.os.SystemClock.sleep;
 
 public class Acelerometro extends Activity implements SensorEventListener {
 
@@ -89,9 +88,9 @@ public class Acelerometro extends Activity implements SensorEventListener {
 
     {
 
-        SensorManager mSensorManager=(SensorManager) getSystemService(SENSOR_SERVICE);
+        //SensorManager mSensorManager=(SensorManager) getSystemService(SENSOR_SERVICE);
 
-        mSensorManager.unregisterListener(this, mAccelerometer);
+        //mSensorManager.unregisterListener(this, mAccelerometer);
 
         super.onPause();
 
@@ -101,9 +100,9 @@ public class Acelerometro extends Activity implements SensorEventListener {
 
     {
 
-        SensorManager mSensorManager=(SensorManager) getSystemService(SENSOR_SERVICE);
+        //SensorManager mSensorManager=(SensorManager) getSystemService(SENSOR_SERVICE);
 
-        mSensorManager.unregisterListener(this, mAccelerometer);
+        //mSensorManager.unregisterListener(this, mAccelerometer);
 
         super.onStop();
     }
