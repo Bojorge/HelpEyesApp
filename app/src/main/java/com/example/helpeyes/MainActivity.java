@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     EditText mensaje;
     Button enviar;
     TextView textIn;
+    Button iniciar;
 
 
     @Override
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         mensaje = (EditText) findViewById(R.id.txtEscribir);
         enviar = (Button) findViewById(R.id.btnEnviar);
         textIn = (TextView)findViewById(R.id.txtLeer);
+        iniciar = (Button) findViewById(R.id.btnIniciar);
 
         acelerometro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +58,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent Contadorpasos = new Intent(MainActivity.this, ContadorPasos.class);
                 startActivity(Contadorpasos);
+            }
+        });
+
+        iniciar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent Iniciar = new Intent(MainActivity.this, AUXILIAR.class);
+                startActivity(Iniciar);
             }
         });
 
