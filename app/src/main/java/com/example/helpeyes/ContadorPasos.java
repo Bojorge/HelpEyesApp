@@ -15,6 +15,7 @@ public class ContadorPasos extends Activity implements SensorEventListener {
 
     TextView tv_steps;
     SensorManager sensorManager;
+    Sensor countSensor;
     boolean running=false;
 
 
@@ -24,16 +25,18 @@ public class ContadorPasos extends Activity implements SensorEventListener {
         setContentView(R.layout.activity_contador_pasos);
 
         tv_steps=(TextView) findViewById(R.id.tv_steps);
-        sensorManager=(SensorManager) getSystemService(Context.SENSOR_SERVICE);
+
+        sensorManager=(SensorManager) getSystemService(SENSOR_SERVICE);
+        countSensor=sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
     }
 
     @Override
     protected void onResume(){
         super.onResume();
         running=true;
-        Sensor countSensor=sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
+
         if(countSensor != null){
-            sensorManager.registerListener(this, countSensor, SensorManager.SENSOR_DELAY_UI);
+            sensorManager.registerListener(this, countSensor, sensorManager.SENSOR_DELAY_UI);
         }
         else {
             Toast.makeText(this, " NO HAY SENSOR ", Toast.LENGTH_SHORT).show();
